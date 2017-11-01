@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Advanced APIs Lesson with 500px and Google GeoLocation</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+  <!-- bootstrap -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- Google Maps API -->
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+  <!-- Custom css -->
+  <link rel="stylesheet" href="/styles.css">
+
+
+
+
+</head>
+<body>
+
+  <header class="container-fluid text-center">
+    <h1><span class="picCat1">Photos of</span><span>&nbsp;</span><span class="picLoc1">the World</span></h1>
+  </header>
+
+  <div class="container-fluid sign-in-view">
+    <div class="row text-center">
+      <h3>Discover how beautiful the World can be</h3>
+      <div>&nbsp;</div>
+      <div class="btn-group">
+        <div id="category" class="dropdown">
+          <button id="categoryBtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Photo Category&nbsp;<span class="caret"></span></button>
+          <ul id="categoryDrop" class="dropdown-menu">
+            <li><a href="#">City and Architecture</a></li>
+            <li><a href="#">Landscape</a></li>
+            <li><a href="#">Nature</a></li>
+            <li><a href="#">Street</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Urban Exploration</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div>&nbsp;</div>
+      <div class="btn-group">
+        <div id="location" class="dropdown">
+          <button id="locationBtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Location&nbsp;<span class="caret"></span></button>
+          <ul id="locationDrop" class="dropdown-menu">
+            <li><a href="#">Current Location</a></li>
+            <li><a href="#">London, UK</a></li>
+            <li><a href="#">New York, NY</a></li>
+            <li><a href="#">Paris, FR</a></li>
+            <li><a href="#">Rome, IT</a></li>
+            <li><a href="#">San Francisco, CA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>&nbsp;</div>
+      <div class="btn-group">
+        <div id="radius" class="dropdown">
+          <button id="radiusBtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Radius&nbsp;<span class="caret"></span></button>
+          <ul id="radiusDrop" class="dropdown-menu">
+            <li><a href="#">5 Miles</a></li>
+            <li><a href="#">10 Miles</a></li>
+            <li><a href="#">25 Miles</a></li>
+            <li><a href="#">50 Miles</a></li>
+            <li><a href="#">100 Miles</a></li>
+            <li><a href="#">200 Miles</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>&nbsp;</div>
+      <div class="btn-group">
+        <div id="numImg" class="dropdown">
+          <button id="numImgBtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Number of Images&nbsp;<span class="caret"></span></button>
+          <ul id="numImgDrop" class="dropdown-menu">
+            <li><a href="#">1</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#">20</a></li>
+            <li><a href="#">50</a></li>
+            <li><a href="#">100</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+          <button class="btn btn-default">
+            <a href="#" id="login">Display Photos</a>
+          </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid text-center image-results-view">
+    <h3><span>Here are some&nbsp;</span><span class="picCat"></span>&nbsp;<span class="picLoc"></span><span>&nbsp;from 500px</span></h3>
+    <div class="images"></div>
+
+    <div>
+      <button class="btn btn-default">
+        <a href="#" id="back">Return to Search</a>
+      </button>
+    </div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+  </div>
+
+  <!-- js -->
+  <script src="/500px.js"></script>
+  <script src="/apiKeys.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
